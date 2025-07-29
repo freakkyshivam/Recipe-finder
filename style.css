@@ -1,0 +1,247 @@
+ 
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  padding: 20px;
+  color: #333;
+   font-family: 'Poppins', sans-serif;
+}
+
+/* Header section */
+#home {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#home h1 {
+     font-family: 'Wild Hazelnut', cursive;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form button {
+  padding: 10px 20px;
+  background-color: #ff7700;
+    color: #444;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #219150;
+}
+
+/* Loader */
+.loader {
+  margin: 10px auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #27ae60;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Recipe list grid */
+#recipeList {
+  column-count: 4;
+  column-gap: 20px;
+  /* max-height: 1200px;  */
+  /* overflow-y: auto; */
+  padding: 10px;
+}
+
+
+/* Recipe card */
+.recipe-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.03);
+}
+
+.recipe-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.recipe-card-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.recipe-card-title {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+/* Recipe details section */
+.recipe-details {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.recipe-details img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.recipe-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.recipe-details p {
+  margin-bottom: 10px;
+}
+
+.recipe-details a {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.recipe-details a:hover {
+  text-decoration: underline;
+}
+
+
+/* Flip Card Container */
+ 
+
+
+
+.flip-card {
+  background-color: transparent;
+ display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  break-inside: avoid;
+  width: 100%;
+  height: 400px;
+  perspective: 1000px;
+}
+
+/* Inner Container */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card Faces */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Front Face */
+.flip-card-front {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.flip-card-front h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Back Face */
+.flip-card-back {
+  background-color: #ff7700;
+  color: white;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.flip-card-back h4 {
+  margin-bottom: 10px;
+}
+
+.flip-card-back p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.flip-card-back a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+ 
